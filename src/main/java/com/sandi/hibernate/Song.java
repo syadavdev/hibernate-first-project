@@ -1,4 +1,4 @@
-package com.sandi;
+package com.sandi.hibernate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

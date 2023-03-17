@@ -1,4 +1,4 @@
-package com.sandi;
+package com.sandi.hibernate;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -20,8 +20,10 @@ public class MySqlProcedureCall {
         stmt.setInt(1, input);
         stmt.registerOutParameter(2, Types.INTEGER);
         stmt.execute();
+        stmt.getResultSet().next();
 
-        System.out.println("Output : " + stmt.getInt(2));
+        System.out.println("Output variable value : " + stmt.getInt(2));
+        System.out.println("procedure result : " + stmt.getResultSet().getString(1));
 
         connection.close();
     }

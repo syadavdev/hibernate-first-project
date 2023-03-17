@@ -1,4 +1,4 @@
-package com.sandi;
+package com.sandi.hibernate;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
