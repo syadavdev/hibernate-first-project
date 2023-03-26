@@ -13,7 +13,7 @@ public class ProductRepository {
     private JdbcTemplate jdbcTemplate;
 
     @Transactional
-    public void saveProduct(Product product){
+    public void saveProductDao(Product product){
         String sql = "insert into product values(?, ?)";
         Object[] args = {product.getId(), product.getName()};
         jdbcTemplate.update(sql, args);
