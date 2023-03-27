@@ -30,7 +30,7 @@ public class CallTracker {
     public void logBeforeMethodCall(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println("method started " + proceedingJoinPoint.getSignature().getName());
         final Object proceed = proceedingJoinPoint.proceed();
-        System.out.println(proceed);
+        //System.out.println(proceed);
         System.out.println("method ended " + proceedingJoinPoint.getSignature().getName());
 
     }
